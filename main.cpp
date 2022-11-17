@@ -9,30 +9,17 @@ using namespace std;
 
 int main()
 {
+    int n;
     int num;
-    int guess;
-    bool isGuessed;
 
     srand(time(0));
-    num = rand() % 100;
 
-    isGuessed = false;
-
-    while (!isGuessed)
+    cin >> n;
+    
+    for(int i=0; i<=100; i++)
     {
-        cin >> guess;
-
-        if (guess == num)
-        {
-            cout << "You guessed the correct number." << endl;
-            isGuessed = true;
-        }
-        else if (guess < num)
-            cout << "Your guess is lower than the number." << endl
-                 << " Guess again!" << endl;
-        else
-            cout << "Your guess is higher than the number." << endl
-                 << " Guess again!" << endl;
+       num = rand() % 100;
+       cout << num << endl;
     }
     return 0;
 }
